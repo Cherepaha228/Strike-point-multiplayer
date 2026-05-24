@@ -1,3 +1,4 @@
+import pygame as pg
 class Player:
     def __init__(self, speed: int):
         self.x = 0
