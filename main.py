@@ -1,13 +1,17 @@
 import pygame as pg
 
-pg.init()
+def main():
+    pg.init()
+    window = pg.display.set_mode((1920, 1080), pg.FULLSCREEN)
 
-screen = pg.display.set_mode((1920, 1080), pg.FULLSCREEN)
+    running = True
+    while running:
+        for event in pg.event.get():
+            if event.type == pg.QUIT:
+                running = False
+        window.fill((32, 32, 32))
 
-run_program = True
+        pg.display.flip()
 
-while run_program:
-    for event in pg.event.get():
-        if event.type == pg.QUIT:
-            run_program = False
-    pass
+if __name__ == '__main__':
+    main()
