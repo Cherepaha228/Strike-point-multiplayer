@@ -1,6 +1,10 @@
+"""Главный файл программы.
+"""
 import pygame as pg
 
 def main():
+    """ Осноная функция для общей логики.
+    """
     pg.init()
     window = pg.display.set_mode((1920, 1080), pg.FULLSCREEN)
 
