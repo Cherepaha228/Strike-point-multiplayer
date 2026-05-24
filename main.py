@@ -7,7 +7,7 @@ from text import Text
 
 
 def main():
-    """ Осноная функция для общей логики.
+    """ Основная функция для общей логики.
     """
     pg.init()
     window = pg.display.set_mode((1920, 1080), pg.FULLSCREEN)
