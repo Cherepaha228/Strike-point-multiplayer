@@ -1,7 +1,7 @@
 """Главный файл программы.
 """
 import pygame as pg
-
+from weapon import Weapon
 from player import Player
 from text import Text
 
@@ -11,8 +11,10 @@ def main():
     """
     pg.init()
     window = pg.display.set_mode((1920, 1080), pg.FULLSCREEN)
-    player = Player(5)
+    player = Player(pg.Vector2(50, 50), 1)
     text = Text(pg.Vector2(50, 50), 'Hi world!', (0, 255, 0), 44)
+
+    rifle = Weapon('rifle', pg.Vector2(100, 100), 10, 10)
 
     clock = pg.time.Clock()
     running = True
@@ -24,8 +26,10 @@ def main():
         window.fill((32, 32, 32))
         player.draw(window)
         player.logic(dt)
+        rifle.draw(window)
         text.draw(window)
         pg.display.flip()
+
 
 if __name__ == '__main__':
     main()

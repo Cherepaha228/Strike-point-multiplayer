@@ -5,12 +5,12 @@ class Player:
     """ Класс игрока.
     """
 
-    def __init__(self, speed: int):
+    def __init__(self, pos: pg.Vector2, speed: float):
         """
         Создание класса.
         :param speed: Скорость игрока.
         """
-        self.pos: pg.Vector2 = pg.Vector2(0, 0)
+        self.pos: pg.Vector2 = pos
         self.speed = speed
 
     def logic(self, dt):
