@@ -11,7 +11,7 @@ def main():
     """
     pg.init()
     window = pg.display.set_mode((1920, 1080), pg.FULLSCREEN)
-    player = Player(5)
+    player = Player(0.25)
     text = Text(pg.Vector2(50, 50), 'Hi world!', (0, 255, 0), 44)
 
     clock = pg.time.Clock()
