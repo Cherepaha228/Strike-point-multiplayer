@@ -1,6 +1,4 @@
 import pygame as pg
-
-
 class Player:
     """ Класс игрока.
     """
